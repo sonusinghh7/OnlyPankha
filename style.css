@@ -1,0 +1,206 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(./image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav{
+    top: 0;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    cursor: pointer;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    height: 70px;
+    width: 300px;
+
+}
+.sonu{
+    height: 70px;
+    width: 300px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+
+    
+}
+
+.sonu a{
+    
+    text-decoration: none;
+    color: black;
+    margin: 0px 5px;
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: crimson; 
+    transition: width 0.4s ease; 
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 0;
+    }
+}
+
+.animated-underline {
+    display: inline-block;
+    animation: underlineAnimation 2s infinite;
+}
+
+
+#heart {
+    animation: beat 1s infinite ease-in-out;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+}
+
+
+.fan{
+    position: fixed;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./image/fan.png);
+    transition: transform 0.5s ease;
+
+}
+
+#btn{
+    position: fixed;
+    border: none;
+    cursor: pointer;
+    color: black;   
+    background-color: rgb(79, 231, 170);
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    margin-top: 470px;
+    border-radius: 30px;
+    
+}
+
+
+@media screen and (max-width: 600px){
+    .logo{
+        width: 120px;
+        font-size: 12px;
+        justify-content: start;
+        padding-left: 20px;
+
+    }
+    .sonu{
+        width: 230px;
+        font-size: 18px;
+        justify-content: end;
+        padding-right: 30px;
+    }
+    .fan{
+        width: 350px;
+        height: 350px;
+    }
+    #btn{
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        font-weight: bolder;
+        margin-top: 250px;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .logo{
+        width: 170px;
+        font-size: 12px;
+        font-weight: bold;
+        justify-content: start;
+        padding-left: 20px;
+
+    }
+    .sonu{
+        width: 180px;
+        font-size: 15px;
+        justify-content: end;
+        padding-right: 10px;
+
+
+    }
+
+    #heart{
+        height: 18px;
+    }
+    .fan{
+        width: 300px;
+        height: 300px;
+    }
+    #btn{
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+        font-weight: bolder;
+        margin-top: 150px;
+    }
+}
